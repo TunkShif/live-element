@@ -1,18 +1,21 @@
 {
   "name": "@tunkshif/live-element",
   "description": "Create custom element that works with Phoenix LiveView.",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "homepage": "https://github.com/TunkShif/live-element",
   "author": "Tristan Yang <tunkshif@foxmail.com>",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
+  },
   "types": "./dist/index.d.ts",
   "files": [
     "src",
-    "dist",
-    "decorators.js",
-    "decorators.d.ts"
+    "dist"
   ],
   "repository": {
     "type": "git",

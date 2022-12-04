@@ -1,2 +1,3 @@
-export { default as LiveElement } from "./live-element"
-export { default as LiveViewJS } from "./liveview-js"
+export * from "./live-element"
+export * from "./decorators"
+export * from "./live-js"

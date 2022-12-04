@@ -1,4 +1,4 @@
-import LiveViewJS from "./liveview-js"
+import { LiveJS } from "./live-js"
 
 interface QueryOptions {
   customRoot?: boolean
@@ -41,7 +41,7 @@ export const attr =
       },
       set(this: Element, value: string) {
         if (options?.live) {
-          LiveViewJS.setAttribute(this, name, value)
+          LiveJS.setAttribute(this, name, value)
         } else {
           this.setAttribute(name, value)
         }
