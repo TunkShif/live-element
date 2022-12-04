@@ -2,6 +2,10 @@ declare global {
   class LiveSocket {
     execJS(el: Element, js: string): void
   }
+
+  interface Window {
+    liveSocket: LiveSocket
+  }
 }
 
 export interface JSCommandMap {

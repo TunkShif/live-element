@@ -4,15 +4,9 @@ const command = <TKind extends keyof JSCommandMap>(kind: TKind, args: JSCommandM
   JSON.stringify([[kind, args]])
 
 export class LiveJS {
-  private static _liveSocket: LiveSocket
-
-  static init(liveSocket: LiveSocket) {
-    this._liveSocket = liveSocket
-  }
-
   static get liveSocket() {
-    if (!this._liveSocket) throw new Error("LiveSocket not initialized.")
-    return this._liveSocket
+    if (!window.liveSocket) throw new Error("LiveSocket not initialized.")
+    return window.liveSocket
   }
 
   static execute(element: Element, command: string | undefined | null) {
